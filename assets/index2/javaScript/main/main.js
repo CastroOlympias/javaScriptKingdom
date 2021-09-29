@@ -1,7 +1,7 @@
 const mainHead = document.getElementById('head');
 const mainHeadCssLink = document.createElement('link');
 mainHeadCssLink.rel = "stylesheet";
-mainHeadCssLink.href = "./assets/index/cssStyles/main/main.css";
+mainHeadCssLink.href = "./assets/index2/cssStyles/main/main.css";
 bodyHead.append(mainHeadCssLink)
 
 
@@ -12,12 +12,12 @@ main.id = 'main';
 bodyEl.append(main)
 
 const mainH1El = document.createElement('h1');
-mainH1El.textContent = 'Main';
+mainH1El.textContent = 'INDEX 2 MAIN';
 main.append(mainH1El);
 
 const button = document.createElement('button');
 button.id = 'button';
-button.textContent = 'click me to go document 1';
+button.textContent = 'CLICK TO GO TO INDEX 1';
 main.append(button)
 
 

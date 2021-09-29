@@ -4,7 +4,7 @@ console.log(htmlPage)
 const bodyHead = document.getElementById('head');
 const bodyHeadCssLink = document.createElement('link');
 bodyHeadCssLink.rel = "stylesheet";
-bodyHeadCssLink.href = "./assets/index/cssStyles/body/body.css";
+bodyHeadCssLink.href = "./assets/index2/cssStyles/body/body.css";
 bodyHead.append(bodyHeadCssLink)
 
 // body HTML element
@@ -12,7 +12,7 @@ const bodyEl = document.getElementById('body');
 // bodyEl.setAttribute('style', 'background-color: brown;');
 
 const bodyH1El = document.createElement('h1');
-bodyH1El.textContent = 'Bdddody'
+bodyH1El.textContent = 'INDEX 2 BODY'
 bodyEl.append(bodyH1El);
 
 // javaScript elements

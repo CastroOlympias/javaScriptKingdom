@@ -12,12 +12,12 @@ main.id = 'main';
 bodyEl.append(main)
 
 const mainH1El = document.createElement('h1');
-mainH1El.textContent = 'Main';
+mainH1El.textContent = 'INDEX 1 MAIN';
 main.append(mainH1El);
 
 const button = document.createElement('button');
 button.id = 'button';
-button.textContent = 'click me to go document 2';
+button.textContent = 'CLICK TO GO TO INDEX 2';
 main.append(button)
 
 

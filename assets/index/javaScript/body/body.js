@@ -12,7 +12,7 @@ const bodyEl = document.getElementById('body');
 // bodyEl.setAttribute('style', 'background-color: brown;');
 
 const bodyH1El = document.createElement('h1');
-bodyH1El.textContent = 'Bdddody'
+bodyH1El.textContent = 'INDEX 1 BODY'
 bodyEl.append(bodyH1El);
 
 // javaScript elements
