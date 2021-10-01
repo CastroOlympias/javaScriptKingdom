@@ -1,0 +1,20 @@
+#navBar {
+    position: absolute;
+    bottom: 0px;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: green;
+    padding: 10px;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
+}
+
+#navBtns {
+    font-size: 20px;
+}
+
+#appListModal {
+    background-color: blue;
+}

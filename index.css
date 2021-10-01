@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#rootBody {
+    padding: 0px;
+    background-color: red;
+}
