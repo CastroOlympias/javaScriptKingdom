@@ -1,13 +1,14 @@
 // Loads this specific modules CSS styles
 const navBarCss = document.createElement('link')
 navBarCss.rel = 'stylesheet';
-navBarCss.href = './modules/navBar/navBar.css';
-rootHead.append(navBarCss)
+navBarCss.href = './globalComponents/navBar/navBar.css';
+indexHeadId.append(navBarCss)
 
 // Navigation bar, for global use in other html files and dynamic views
 const navBar = document.createElement('section');
+navBar.className = 'navBar'
 navBar.id = 'navBar';
-rootBody.append(navBar)
+indexBodyId.append(navBar)
 
 // Navigation bar home button
 const navHomeAnch = document.createElement('a')
@@ -44,13 +45,13 @@ navMenuAnch.append(navMenuBtn)
 
 const appListModalScript = document.createElement('script')
 appListModalScript.id = 'appListModal'
-appListModalScript.setAttribute('src', './modules/navBar/appListModal.js')
+appListModalScript.setAttribute('src', './globalComponents/navBar/appListModal.js')
 
 const appListModalOpenCLose = function () {
     if (navAppListBtn.className == 'appList-closed') {
         navAppListBtn.className = 'appList-opened'
-        rootHead.append(appListModalScript)
-        rootBody.append(appListModal);
+        indexHeadId.append(appListModalScript)
+        indexBodyId.append(appListModal);
     } else {
         navAppListBtn.className = 'appList-closed'
         appListModalScript.remove()

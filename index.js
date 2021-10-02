@@ -1,21 +1,19 @@
-// These getElements are globally to any script that gets loaded
-const rootHtml = document.getElementById('rootHtml');
-const rootHead = document.getElementById('rootHead');
-const rootBody = document.getElementById('rootBody');
-// Loads the index.css file to style the root of the application
-const indexCss = document.createElement('link')
-indexCss.rel = 'stylesheet';
-indexCss.href = './index.css';
-rootHead.append(indexCss)
-// script elements here for auto loading section type parent elements not trigger loaded by running functions
+// These getElements are hardcoded html elements and are global for any script to use to append new script elements from any script file
+const indexHtmlId = document.getElementById('indexHtmlId');
+const indexHeadId = document.getElementById('indexHeadId');
+const indexBodyClass = document.getElementsByClassName('indexBodyClass');
+const indexBodyId = document.getElementById('indexBodyId')
 
-// Main element auto loaded here by sript
-const rootMainScript = document.createElement('script');
-rootMainScript.setAttribute('src', './modules/main/main.js');
-rootHtml.append(rootMainScript);
+// Naming scheme 1) application (html) name, 2) element to create, 3) how its loaded, through which element type, script or link. index = application-name, main = element, script which is the main.js file. The main.js file is where the element will be created. Each element or component will also load their own styles.
 
-// Nabigation bar is globalally loaded via a javaScript
-const navBarModule = document.createElement('script');
-navBarModule.setAttribute('src', './modules/navBar/navBar.js')
-rootHtml.append(navBarModule)
+// Each element or component will have a className files styles and an id for functions baring the same name used for it's const variable
+
+// Main element
+const indexMainScript = document.createElement('script');
+indexMainScript.setAttribute('src', './globalComponents/main/main.js');
+indexHtmlId.append(indexMainScript);
+// Navigation element
+const indexNavBar = document.createElement('script');
+indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
+indexHtmlId.append(indexNavBar)
 

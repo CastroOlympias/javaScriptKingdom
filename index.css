@@ -7,9 +7,9 @@
     text-decoration: none;
 }
 
-#rootBody {
+.indexBodyClass {
     display: flex;
     justify-content: space-evenly;
-    padding: 0px;
+    padding: 10px;
     background-color: red;
 }
