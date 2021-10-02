@@ -16,5 +16,12 @@
 }
 
 #appListModal {
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 600px;
+    width: 90%;
+    box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    border-radius: 17px;
     background-color: blue;
 }

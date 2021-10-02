@@ -1,12 +1,12 @@
 // Loads this specific modules CSS styles
 const navBarCss = document.createElement('link')
 navBarCss.rel = 'stylesheet';
-navBarCss.href = './indexModules/navBar/navBar.css';
+navBarCss.href = './modules/navBar/navBar.css';
 rootHead.append(navBarCss)
 
 // Navigation bar, for global use in other html files and dynamic views
 const navBar = document.createElement('section');
-navBar.id ='navBar';
+navBar.id = 'navBar';
 rootBody.append(navBar)
 
 // Navigation bar home button
@@ -42,17 +42,19 @@ navMenuBtn.id = 'navBtns';
 navMenuBtn.textContent = 'Menu';
 navMenuAnch.append(navMenuBtn)
 
+const appListModalScript = document.createElement('script')
+appListModalScript.id = 'appListModal'
+appListModalScript.setAttribute('src', './modules/navBar/appListModal.js')
 
-
-const alterClass = function() {
-    if (navAppListBtn.className === 'appList-closed') {
-        navAppListBtn.className = 'appList-open'
+const appListModalOpenCLose = function () {
+    if (navAppListBtn.className == 'appList-closed') {
+        navAppListBtn.className = 'appList-opened'
+        rootHead.append(appListModalScript)
+        rootBody.append(appListModal);
     } else {
-        navAppListBtn.remove()
+        navAppListBtn.className = 'appList-closed'
+        appListModalScript.remove()
+        appListModal.remove()
     }
 }
-console.log(navAppListBtn.id)
-
-navAppListBtn.onclick = alterClass;
-
-// I think I can use an if statement in a function, that when I press a navbutton, who's id or class is default, appList-closed, then I can run an if statement to check the id,..closed then create an elemmetn section which would containt links to load into other html apps or load other modules. Once the module loads becuase it's closed I can alter the id of the elment to say ...open, then with the if statement if it is not closed, else, remove() on the list element to simulate a closing window or app menu
+navAppListBtn.onclick = appListModalOpenCLose;
