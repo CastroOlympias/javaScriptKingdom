@@ -21,4 +21,9 @@ anch2.append(button2)
 
 const componentOneScript = document.createElement('script');
 componentOneScript.setAttribute('srs', './loadComponents/componentOne/componentOne.js')
-appListModal.append(componentOneScript)
+indexHeadId.append(componentOneScript)
+
+const hello = document.createElement('h1');
+hello.textContent = 'Heey asdlkfasdlkasdklfjlkf  dfdfdf dfj dlkjf lskdjf lskdfj';
+appListModal.append(hello);
+console.log(hello.textContent)
