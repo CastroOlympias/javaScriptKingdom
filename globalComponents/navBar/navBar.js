@@ -30,7 +30,7 @@ navAppListAnch.id = 'navAppListAnch';
 navBar.append(navAppListAnch)
 
 const navAppListBtn = document.createElement('button');
-navAppListBtn.className = 'appList-closed'
+navAppListBtn.className = 'navAppList-closed'
 navAppListBtn.id = 'navBtns';
 navAppListBtn.textContent = 'Open AppList';
 navAppListAnch.append(navAppListBtn)
@@ -68,17 +68,18 @@ navMenuModal.id = 'navMenuModal';
 
 // this function needs to append the appListModal child elements and remove them. you can create the in the appListModal js file, but proper appending needs to happen here or else some elements don't consistant get re-appened after open and close, like the appListModalCss element, the tyles will not be loaded and render a second time unless appended if the below if statement function
 const appListModalOpenCLose = function () {
-    if (navAppListBtn.className == 'appList-closed') {
-        navAppListBtn.className = 'appList-opened'
+    if (navAppListBtn.className == 'navAppList-closed') {
+        navAppListBtn.className = 'navAppList-opened'
         indexHtmlId.append(appListModalScript)
         indexBodyId.append(navAppListModal);
         navAppListBtn.textContent = 'Close AppList';
     } else {
-        navAppListBtn.className = 'appList-closed'
+        navAppListBtn.className = 'navAppList-closed'
         appListModalScript.remove()
         navAppListModal.remove()
         // appListModalCss.remove()
         navAppListBtn.textContent = 'Open AppList';
+        button2.remove()
     }
 }
 navAppListBtn.onclick = appListModalOpenCLose;
@@ -90,11 +91,15 @@ const menuModalOpenClose = function () {
         indexHtmlId.append(navMenuModalScript)
         indexBodyId.append(navMenuModal);
         navMenuBtn.textContent = 'Close Menu'
+       
+        indexBodyId.append(hhh)
     } else {
         navMenuBtn.className = 'navMenuModal-closed'
         navMenuModalScript.remove()
         navMenuModal.remove()
         navMenuBtn.textContent = 'Open Menu'
+        
+        hhh.remove()
     }
 }
 navMenuBtn.onclick = menuModalOpenClose;
