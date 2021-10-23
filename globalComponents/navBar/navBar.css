@@ -15,6 +15,9 @@
     font-size: 20px;
 }
 
+
+
+/* Child componenet styles */
 #appListModal {
     padding: 10px;
     position: absolute;
@@ -26,7 +29,7 @@
     background-color: blue;
 }
 
-/* @keyframes slideInFromLeft {
+@keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
     }
@@ -36,19 +39,28 @@
 }
 
 #appListModal {
-    animation: .3s ease-out 0s 1 slideInFfromLeft;
-} */
+    animation: .3s ease-out 0s 1 slideInFromLeft;
+}
 
-
+#navMenuModal {
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 600px;
+    width: 90%;
+    box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    border-radius: 17px;
+    background-color: greenyellow;
+}
 
 /* The animation code */
 @keyframes fade-in {
     from {background-color: transparent;}
-    to {background-color: blue;}
+    to {background-color: greenyellow;}
   }
   
   /* The element to apply the animation to */
-  #appListModal, text {
+  #navMenuModal, text {
     animation-name: fade-in;
     animation-duration: .8s;
   }

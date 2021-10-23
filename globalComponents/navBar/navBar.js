@@ -4,11 +4,13 @@ navBarCss.rel = 'stylesheet';
 navBarCss.href = './globalComponents/navBar/navBar.css';
 indexHeadId.append(navBarCss)
 
+
 // Navigation bar, for global use in other html files and dynamic views
 const navBar = document.createElement('section');
 navBar.className = 'navBar'
 navBar.id = 'navBar';
 indexBodyId.append(navBar)
+
 
 // Navigation bar home button
 const navHomeAnch = document.createElement('a')
@@ -21,6 +23,7 @@ navHomeBtn.id = 'navBtns';
 navHomeBtn.textContent = 'Home';
 navHomeAnch.append(navHomeBtn)
 
+
 // Navigation bar application list button
 const navAppListAnch = document.createElement('a')
 navAppListAnch.id = 'navAppListAnch';
@@ -29,8 +32,17 @@ navBar.append(navAppListAnch)
 const navAppListBtn = document.createElement('button');
 navAppListBtn.className = 'appList-closed'
 navAppListBtn.id = 'navBtns';
-navAppListBtn.textContent = 'AppList';
+navAppListBtn.textContent = 'Open AppList';
 navAppListAnch.append(navAppListBtn)
+
+const appListModalScript = document.createElement('script')
+appListModalScript.id = 'appListModal'
+appListModalScript.setAttribute('src', './loadComponents/appListModal/appListModal.js')
+
+const navAppListModal = document.createElement('section');
+navAppListModal.className = 'appListModal'
+navAppListModal.id = 'appListModal';
+
 
 // Navigation bar menu button
 const navMenuAnch = document.createElement('a')
@@ -38,24 +50,51 @@ navMenuAnch.id = 'navBtns';
 navBar.append(navMenuAnch)
 
 const navMenuBtn = document.createElement('button');
-navMenuBtn.className = 'menu-closed'
+navMenuBtn.className = 'navMenuModal-closed'
 navMenuBtn.id = 'navBtns';
-navMenuBtn.textContent = 'Menu';
+navMenuBtn.textContent = 'Open Menu';
 navMenuAnch.append(navMenuBtn)
 
-const appListModalScript = document.createElement('script')
-appListModalScript.id = 'appListModal'
-appListModalScript.setAttribute('src', './globalComponents/navBar/appListModal.js')
+const navMenuModalScript = document.createElement('script')
+navMenuModalScript.id = 'menuModal'
+navMenuModalScript.setAttribute('src', './loadComponents/menuModal/menuModal.js')
 
+const navMenuModal = document.createElement('section');
+navMenuModal.className = 'navMenuModal'
+navMenuModal.id = 'navMenuModal';
+
+
+
+
+// this function needs to append the appListModal child elements and remove them. you can create the in the appListModal js file, but proper appending needs to happen here or else some elements don't consistant get re-appened after open and close, like the appListModalCss element, the tyles will not be loaded and render a second time unless appended if the below if statement function
 const appListModalOpenCLose = function () {
     if (navAppListBtn.className == 'appList-closed') {
         navAppListBtn.className = 'appList-opened'
-        indexHeadId.append(appListModalScript)
-        indexBodyId.append(appListModal);
+        indexHtmlId.append(appListModalScript)
+        indexBodyId.append(navAppListModal);
+        navAppListBtn.textContent = 'Close AppList';
     } else {
         navAppListBtn.className = 'appList-closed'
         appListModalScript.remove()
-        appListModal.remove()
+        navAppListModal.remove()
+        // appListModalCss.remove()
+        navAppListBtn.textContent = 'Open AppList';
     }
 }
 navAppListBtn.onclick = appListModalOpenCLose;
+
+
+const menuModalOpenClose = function () {
+    if (navMenuBtn.className == 'navMenuModal-closed') {
+        navMenuBtn.className = 'navMenuModal-opened'
+        indexHtmlId.append(navMenuModalScript)
+        indexBodyId.append(navMenuModal);
+        navMenuBtn.textContent = 'Close Menu'
+    } else {
+        navMenuBtn.className = 'navMenuModal-closed'
+        navMenuModalScript.remove()
+        navMenuModal.remove()
+        navMenuBtn.textContent = 'Open Menu'
+    }
+}
+navMenuBtn.onclick = menuModalOpenClose;

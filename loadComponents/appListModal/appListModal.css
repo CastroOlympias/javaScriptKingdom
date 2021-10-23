@@ -1,0 +1,37 @@
+#appListModal {
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 600px;
+    width: 90%;
+    box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    border-radius: 17px;
+    background-color: blue;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#appListModal {
+    animation: .3s ease-out 0s 1 slideInFromLeft;
+}
+
+
+
+/* The animation code */
+/* @keyframes fade-in {
+    from {background-color: transparent;}
+    to {background-color: blue;}
+  }
+   */
+  /* The element to apply the animation to */
+  /* #appListModal, text {
+    animation-name: fade-in;
+    animation-duration: .8s;
+  } */

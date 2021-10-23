@@ -1,6 +1,6 @@
 const indexMainCss = document.createElement('link');
 indexMainCss.rel = "stylesheet";
-indexMainCss.href = "./globalComponents/main/main.css";
+indexMainCss.href = "./loadComponents/main/main.css";
 indexHeadId.append(indexMainCss)
 
 // Loads the index main element section
