@@ -2,7 +2,7 @@
 const navBarCss = document.createElement('link')
 navBarCss.rel = 'stylesheet';
 navBarCss.href = './globalComponents/navBar/navBar.css';
-indexHeadId.append(navBarCss)
+indexHtmlId.append(navBarCss)
 
 
 // Navigation bar, for global use in other html files and dynamic views
@@ -37,7 +37,7 @@ navAppListAnch.append(navAppListBtn)
 
 const appListModalScript = document.createElement('script')
 appListModalScript.id = 'appListModal'
-appListModalScript.setAttribute('src', './loadComponents/appListModal/appListModal.js')
+indexMainElement.setAttribute('src', './loadComponents/appListModal/appListModal.js')
 
 const navAppListModal = document.createElement('section');
 navAppListModal.className = 'appListModal'
@@ -57,49 +57,76 @@ navMenuAnch.append(navMenuBtn)
 
 const navMenuModalScript = document.createElement('script')
 navMenuModalScript.id = 'menuModal'
-navMenuModalScript.setAttribute('src', './loadComponents/menuModal/menuModal.js')
+indexMainElement.setAttribute('src', './loadComponents/menuModal/menuModal.js')
 
 const navMenuModal = document.createElement('section');
 navMenuModal.className = 'navMenuModal'
 navMenuModal.id = 'navMenuModal';
 
+const domRefresh = function () {
+    indexMainElement.remove()
+    indexBodyId.append(indexMainElement)
+    navAppListModal.remove()
+    navAppListBtn.className = 'navAppList-closed'
+    navAppListBtn.textContent = 'Open AppList';
+
+   
+
+    navMenuModal.remove()
+    navMenuBtn.className = 'navMenuModal-closed'
+    navMenuBtn.textContent = 'Open Menu'
+    
+}
 
 
+navHomeBtn.onclick = domRefresh
 
 // this function needs to append the appListModal child elements and remove them. you can create the in the appListModal js file, but proper appending needs to happen here or else some elements don't consistant get re-appened after open and close, like the appListModalCss element, the tyles will not be loaded and render a second time unless appended if the below if statement function
 const appListModalOpenCLose = function () {
     if (navAppListBtn.className == 'navAppList-closed') {
         navAppListBtn.className = 'navAppList-opened'
-        indexHtmlId.append(appListModalScript)
-        indexBodyId.append(navAppListModal);
+        indexMainElement.append(appListModalScript)
+        indexMainElement.append(navAppListModal);
         navAppListBtn.textContent = 'Close AppList';
+        closeNavMenu()
     } else {
         navAppListBtn.className = 'navAppList-closed'
         appListModalScript.remove()
         navAppListModal.remove()
-        // appListModalCss.remove()
         navAppListBtn.textContent = 'Open AppList';
-        button2.remove()
     }
 }
 navAppListBtn.onclick = appListModalOpenCLose;
 
+closeNavMenu = function() {
+    navMenuBtn.className = 'navMenuModal-closed'
+    navMenuModalScript.remove()
+    navMenuModal.remove()
+    navMenuBtn.textContent = 'Open Menu'
+}
 
 const menuModalOpenClose = function () {
     if (navMenuBtn.className == 'navMenuModal-closed') {
         navMenuBtn.className = 'navMenuModal-opened'
-        indexHtmlId.append(navMenuModalScript)
-        indexBodyId.append(navMenuModal);
+        indexMainElement.append(navMenuModalScript)
+        indexMainElement.append(navMenuModal);
         navMenuBtn.textContent = 'Close Menu'
        
-        indexBodyId.append(hhh)
+        closeAppList()
     } else {
         navMenuBtn.className = 'navMenuModal-closed'
         navMenuModalScript.remove()
         navMenuModal.remove()
         navMenuBtn.textContent = 'Open Menu'
         
-        hhh.remove()
     }
 }
+
 navMenuBtn.onclick = menuModalOpenClose;
+
+closeAppList = function () {
+    navAppListBtn.className = 'navAppList-closed'
+    appListModalScript.remove()
+    navAppListModal.remove()
+    navAppListBtn.textContent = 'Open AppList';
+}

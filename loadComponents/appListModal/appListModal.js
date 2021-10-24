@@ -2,7 +2,7 @@ console.log('App List Modal')
 
 const componentOneScript = document.createElement('script')
 componentOneScript.setAttribute('src', './loadComponents/testComp2/testComp2.js')
-indexHtmlId.append(componentOneScript)
+indexMainElement.append(componentOneScript)
 
 // const text = document.createElement('h1')
 // text.id = 'text'

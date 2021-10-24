@@ -23,6 +23,11 @@ const indexBodyClass = document.getElementsByClassName('indexBodyClass');
 
 // *** Global Components/Elements ***
 
+const indexMainElement = document.createElement('main');
+indexMainElement.className = 'indexMainClass'
+indexMainElement.id = 'indexMainId'
+indexBodyId.append(indexMainElement)
+
 // Navigation component element <script>
 const indexNavBar = document.createElement('script');
 indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
@@ -34,48 +39,3 @@ console.log(indexNavBar)
 
 // *** Load Components/Elements ***
 
-// Main element <script>
-const indexMainScript = document.createElement('script');
-indexMainScript.setAttribute('src', './loadComponents/main/main.js');
-indexBodyId.append(indexMainScript);
-
-const h1 = document.createElement('h1')
-
-
-const one = h1
-const two = h1
-
-one.id = 'firstH1'
-two.id = 'secondH1'
-
-createNewElement = { h1 }
-// console.log(h1)
-
-// const anchor = document.createElement('a')
-// const create = function() {
-//     {
-//         element: {
-//             anchor = document.createElement('h1')
-            
-//         }
-//     }
-
-//     console.log(anchor)
-// }
-
-const textOne = 'hahahahgggaha'
-const textTwo = 'heyeyeye'
-
-// const testOne = h1
-
-const testOne = textContent = textOne
-testOne.id = 'hello';
-const testTwo = textContent = textTwo
-
-indexBodyId.append(one)
-h1.append(testOne);
-indexBodyId.append(two)
-h1.append(testTwo)
-
-console.log(window)
-console.log(window.onload)

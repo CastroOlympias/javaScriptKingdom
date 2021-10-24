@@ -9,7 +9,16 @@
 
 .indexBodyClass {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  
+    background-color: red;
+}
+
+.indexMainClass {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
-    background-color: red;
+    background-color: purple;
 }
