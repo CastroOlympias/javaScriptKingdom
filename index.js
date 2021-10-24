@@ -10,10 +10,10 @@
 
 // <script> elements which are to load js files that load elemement into the body, need to be decalred in the parent element of the child elements
 
-const indexHtmlId = document.getElementById('indexHtmlId')
-const indexHeadId = document.getElementById('indexHeadId');
+// const indexHtmlId = document.getElementById('indexHtmlId')
+// const indexHeadId = document.getElementById('indexHeadId');
 const indexBodyId = document.getElementById('indexBodyId')
-const indexBodyClass = document.getElementsByClassName('indexBodyClass');
+const indexBodyClass = document.getElementsByClassName('indexBodyClass test');
 
 // Naming scheme 1) application (html file) name, 2) element to create, 3) how its loaded, through which element type, script or link. index = application-name, main = element, script which is the main.js file. The main.js file is where the element will be created. Each element or component will also load their own styles.
 
@@ -23,16 +23,11 @@ const indexBodyClass = document.getElementsByClassName('indexBodyClass');
 
 // *** Global Components/Elements ***
 
-const indexMainElement = document.createElement('main');
-indexMainElement.className = 'indexMainClass'
-indexMainElement.id = 'indexMainId'
-indexBodyId.append(indexMainElement)
-
 // Navigation component element <script>
 const indexNavBar = document.createElement('script');
 indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
 indexHtmlId.append(indexNavBar)
-console.log(indexNavBar)
+
 
 
 // Load componenets are user called and so, are not always visibile and functional until called

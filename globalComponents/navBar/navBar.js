@@ -37,7 +37,7 @@ navAppListAnch.append(navAppListBtn)
 
 const appListModalScript = document.createElement('script')
 appListModalScript.id = 'appListModal'
-indexMainElement.setAttribute('src', './loadComponents/appListModal/appListModal.js')
+appListModalScript.setAttribute('src', './loadComponents/appListModal/appListModal.js')
 
 const navAppListModal = document.createElement('section');
 navAppListModal.className = 'appListModal'
@@ -57,27 +57,34 @@ navMenuAnch.append(navMenuBtn)
 
 const navMenuModalScript = document.createElement('script')
 navMenuModalScript.id = 'menuModal'
-indexMainElement.setAttribute('src', './loadComponents/menuModal/menuModal.js')
+navMenuModalScript.setAttribute('src', './loadComponents/menuModal/menuModal.js')
 
 const navMenuModal = document.createElement('section');
-navMenuModal.className = 'navMenuModal'
-navMenuModal.id = 'navMenuModal';
+navMenuModal.className = 'navMenuModal-fadeIn'
+navMenuModal.id = 'navMenuModal-fadeIn';
+
+
 
 const domRefresh = function () {
-    indexMainElement.remove()
-    indexBodyId.append(indexMainElement)
-    navAppListModal.remove()
-    navAppListBtn.className = 'navAppList-closed'
-    navAppListBtn.textContent = 'Open AppList';
+    navMenuModal.id = 'navMenuModal-fadeOut'
+    setTimeout(() => {
+        appListModalScript.remove()
+        navAppListModal.remove()
+        navMenuModal.remove()
+        navMenuModalScript.remove()
+        testCompScript.remove()
+        componentOneScript.remove()
+        testCompScript.remove()
+        navAppListBtn.className = 'navAppList-closed'
+        navAppListBtn.textContent = 'Open AppList';
+        
 
-   
-
-    navMenuModal.remove()
+        navMenuModal.id = 'navMenuModal-fadeIn';
+    }, 500);
     navMenuBtn.className = 'navMenuModal-closed'
     navMenuBtn.textContent = 'Open Menu'
-    
-}
 
+}
 
 navHomeBtn.onclick = domRefresh
 
@@ -85,8 +92,8 @@ navHomeBtn.onclick = domRefresh
 const appListModalOpenCLose = function () {
     if (navAppListBtn.className == 'navAppList-closed') {
         navAppListBtn.className = 'navAppList-opened'
-        indexMainElement.append(appListModalScript)
-        indexMainElement.append(navAppListModal);
+        indexBodyId.append(appListModalScript)
+        indexBodyId.append(navAppListModal);
         navAppListBtn.textContent = 'Close AppList';
         closeNavMenu()
     } else {
@@ -107,9 +114,10 @@ closeNavMenu = function() {
 
 const menuModalOpenClose = function () {
     if (navMenuBtn.className == 'navMenuModal-closed') {
+        navMenuModal.id = 'navMenuModal-fadeIn';
         navMenuBtn.className = 'navMenuModal-opened'
-        indexMainElement.append(navMenuModalScript)
-        indexMainElement.append(navMenuModal);
+        indexBodyId.append(navMenuModalScript)
+        indexBodyId.append(navMenuModal);
         navMenuBtn.textContent = 'Close Menu'
        
         closeAppList()
@@ -118,7 +126,6 @@ const menuModalOpenClose = function () {
         navMenuModalScript.remove()
         navMenuModal.remove()
         navMenuBtn.textContent = 'Open Menu'
-        
     }
 }
 

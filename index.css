@@ -5,20 +5,12 @@
     font-family: 'Times New Roman', Times, serif;
     list-style-type: none;
     text-decoration: none;
+    background-color: rgb(255, 242, 217);
 }
 
 .indexBodyClass {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  
-    background-color: red;
-}
-
-.indexMainClass {
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
-    background-color: purple;
 }
