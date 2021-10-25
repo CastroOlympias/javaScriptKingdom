@@ -1,4 +1,4 @@
-#navBar {
+.navBar {
     position: absolute;
     bottom: 0px;
     z-index: 9999;
@@ -11,14 +11,13 @@
     border-top-right-radius: 7%;
 }
 
-#navBtns {
+.navMenuButtons {
     font-size: 20px;
 }
 
-
-
 /* Child componenet styles */
-#appListModal {
+
+.navAppListModal-open {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -38,38 +37,11 @@
     }
 }
 
-#appListModal {
+.navAppListModal-open {
     animation: .3s ease-out 0s 1 slideInFromLeft;
 }
 
-#navMenuModal-fadeIn {
-    padding: 10px;
-    position: absolute;
-    bottom: 100px;
-    height: 80%;
-    width: 95%;
-    box-shadow: 10px 10px 10px rgb(37, 3, 3);
-    border-radius: 17px;
-    background-color: greenyellow;
-}
-
-/* The animation code */
-@keyframes fade-in {
-    from {background-color: transparent;}
-    to {background-color: greenyellow;}
-  }
-  
-  /* The element to apply the animation to */
-  #navMenuModal-fadeIn, text {
-    animation-name: fade-in;
-    animation-duration: .5s;
-  }
-
-
-
-
-
-  #navMenuModal-fadeOut {
+.navAppListModal-close {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -81,15 +53,83 @@
 }
 
 /* The animation code */
-@keyframes fade-out {
-    from {background-color: greenyellow;
-        box-shadow: 10px 10px 10px rgb(37, 3, 3);}
-    to {background-color: transparent;
-        box-shadow: transparent;}
-  }
-  
-  /* The element to apply the animation to */
-  #navMenuModal-fadeOut, text {
-    animation-name: fade-out;
-    animation-duration: .8s;
-  }
+
+@keyframes navAppListModal-fade-out {
+    from {
+        background-color: blue;
+        box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    }
+    to {
+        background-color: transparent;
+        box-shadow: transparent;
+    }
+}
+
+/* The element to apply the animation to */
+
+.navAppListModal-close, text {
+    animation-name: navAppListModal-fade-out;
+    animation-duration: 2s;
+}
+
+
+
+
+
+.navMenuModal-open {
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 80%;
+    width: 95%;
+    box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    border-radius: 17px;
+    background-color: greenyellow;
+    
+}
+
+@keyframes navMenuModal-fade-in {
+    from {
+        background-color: transparent;
+        box-shadow: transparent;
+    }
+    to {
+        background-color: greenyellow;
+        box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    }
+}
+.navMenuModal-open, text {
+    animation-name: navMenuModal-fade-in;
+    animation-duration: 2s;
+}
+
+.navMenuModal-close {
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 80%;
+    width: 95%;
+    box-shadow: transparent;
+    border-radius: 17px;
+    background-color: transparent;
+}
+
+/* The animation code */
+
+@keyframes navMenuModal-fade-out {
+    from {
+        background-color: greenyellow;
+        box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    }
+    to {
+        background-color: transparent;
+        box-shadow: transparent;
+    }
+}
+
+/* The element to apply the animation to */
+
+.navMenuModal-close, text {
+    animation-name: navMenuModal-fade-out;
+    animation-duration: 2s;
+}
