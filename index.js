@@ -10,8 +10,8 @@
 
 // <script> elements which are to load js files that load elemement into the body, need to be decalred in the parent element of the child elements
 
-// const indexHtmlId = document.getElementById('indexHtmlId')
-// const indexHeadId = document.getElementById('indexHeadId');
+const indexHtmlId = document.getElementById('indexHtmlId')
+const indexHeadId = document.getElementById('indexHeadId');
 const indexBodyId = document.getElementById('indexBodyId')
 const indexBodyClass = document.getElementsByClassName('indexBodyClass test');
 
@@ -23,10 +23,17 @@ const indexBodyClass = document.getElementsByClassName('indexBodyClass test');
 
 // *** Global Components/Elements ***
 
+const navBarCss = document.createElement('link')
+navBarCss.rel = 'stylesheet';
+navBarCss.href = './globalComponents/navBar/navBar.css';
+indexHeadId.append(navBarCss)
+
 // Navigation component element <script>
 const indexNavBar = document.createElement('script');
 indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
-indexHtmlId.append(indexNavBar)
+indexHeadId.append(indexNavBar)
+
+
 
 
 
