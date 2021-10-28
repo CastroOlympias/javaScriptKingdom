@@ -35,7 +35,7 @@ indexHeadId.append(navBarCss)
 // Navigation component element <script>
 const indexNavBar = document.createElement('script');
 indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
-indexBodyId.append(indexNavBar)
+indexHeadId.append(indexNavBar)
 
 
 
