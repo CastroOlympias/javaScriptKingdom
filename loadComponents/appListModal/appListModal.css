@@ -19,7 +19,7 @@
 }
 
 .navAppListModal-opened {
-    animation: .5s ease-out 0s .5 slideInFromLeft;
+    animation: .3s ease-out 0s .5 slideInFromLeft;
 }
 
 .navAppListModal-closed {

@@ -2,7 +2,7 @@ const navBar = document.createElement('section');
 navBar.className = 'navBar'
 indexBodyId.append(navBar)
 
-const domRefreshTimer = 500
+const DOMRefreshTimer = 500
 const navModalTimer = 500
 
 const navHomeAnch = document.createElement('a')

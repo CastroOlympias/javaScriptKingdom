@@ -1,4 +1,4 @@
-.navMenuModal-open {
+.navMenuModal-opened {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -20,12 +20,12 @@
         box-shadow: 10px 10px 10px rgb(37, 3, 3);
     }
 }
-.navMenuModal-open, text {
+.navMenuModal-opened, text {
     animation-name: navMenuModal-fade-in;
     animation-duration: .5s;
 }
 
-.navMenuModal-close {
+.navMenuModal-closed {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -47,7 +47,7 @@
     }
 }
 
-.navMenuModal-close, text {
+.navMenuModal-closed, text {
     animation-name: navMenuModal-fade-out;
     animation-duration: .5s;
 }

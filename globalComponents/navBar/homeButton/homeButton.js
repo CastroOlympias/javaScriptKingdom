@@ -1,20 +1,23 @@
-const domRefresh = function () {
-    navMenuModal.id = 'navMenuModal-open'
-    navAppListModal.id = 'navAppListModal-open'
+const DOMRefresh = function () {
+    navMenuModal.className = 'navMenuModal-closed'
+    navMenuBtn.id = 'navMenu-closed'
+    navMenuBtn.textContent = 'Open Menu'
+
+    navAppListModal.className = 'navAppListModal-closed'
+    navAppListBtn.id = 'navAppList-closed'
+    navAppListBtn.textContent = 'Open AppList'
     setTimeout(() => {
-        navAppListModalScript.remove()
-        navAppListModal.remove()
+        navMenuModal.id = 'navMenuModal-closed'
+        navMenuModalStyles.remove()
         navMenuModalScript.remove()
         navMenuModal.remove()
-        testCompScript.remove()
-        componentOneScript.remove()
-        testCompScript.remove()
-    }, `${domRefreshTimer}`);
-    navAppListModal.className = 'navAppListModal-close'
-    navAppListBtn.id = 'navAppList-open'
-    navAppListBtn.textContent = 'Open AppList';
-    navMenuModal.className = 'navMenuModal-close';
-    navMenuBtn.id = 'navMenu-open'
-    navMenuBtn.textContent = 'Open Menu'
+        console.log(navMenuModal.id)
+
+        navAppListModal.id = 'navAppListModal-closed'
+        navAppListModalStyles.remove()
+        navAppListModalScript.remove()
+        navAppListModal.remove()
+        console.log(navAppListModal.id)
+    }, `${DOMRefreshTimer}`)
 }
-navHomeBtn.onclick = domRefresh
+navHomeBtn.onclick = DOMRefresh
