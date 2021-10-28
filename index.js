@@ -10,6 +10,10 @@
 
 // <script> elements which are to load js files that load elemement into the body, need to be decalred in the parent element of the child elements
 
+const DOMRefreshTimer = 500
+const navModalFadeOutTimer = 500
+const modalOpenDelayTimer = 5
+
 const indexHtmlId = document.getElementById('indexHtmlId')
 const indexHeadId = document.getElementById('indexHeadId');
 const indexBodyId = document.getElementById('indexBodyId')
@@ -31,7 +35,7 @@ indexHeadId.append(navBarCss)
 // Navigation component element <script>
 const indexNavBar = document.createElement('script');
 indexNavBar.setAttribute('src', './globalComponents/navBar/navBar.js')
-indexHeadId.append(indexNavBar)
+indexBodyId.append(indexNavBar)
 
 
 

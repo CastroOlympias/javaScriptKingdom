@@ -1,9 +1,9 @@
 const navMenuModalStyles = document.createElement('link')
 navMenuModalStyles.rel = 'stylesheet'
-navMenuModalStyles.href = './loadComponents/menuModal/menuModal.css'
+navMenuModalStyles.href = './loadComponents/menuModal/navMenuModal.css'
 
 const navMenuModalScript = document.createElement('script')
-navMenuModalScript.setAttribute('src', './loadComponents/menuModal/menuModal.js')
+navMenuModalScript.setAttribute('src', './loadComponents/menuModal/navMenuModal.js')
 
 const navMenuModal = document.createElement('section');
 navMenuModal.className = 'navMenuModal-opened'
@@ -30,7 +30,10 @@ const navMenuModalOpen = function () {
         console.log(navMenuModal.id)
         indexHeadId.append(navMenuModalStyles)
         indexBodyId.append(navMenuModalScript)
-        indexBodyId.append(navMenuModal);
+        setTimeout(() => {
+            indexBodyId.append(navMenuModal);
+        }, `${modalOpenDelayTimer}`)
+
 
         navAppListModal.className = 'navAppListModal-closed'
         navAppListBtn.id = 'navAppList-closed'
@@ -41,7 +44,7 @@ const navMenuModalOpen = function () {
             navAppListModalScript.remove()
             navAppListModal.remove()
             console.log(navAppListModal.id)
-        }, `${navModalTimer}`)
+        }, `${navModalFadeOutTimer}`)
     }
 }
 
@@ -58,7 +61,7 @@ const navMenuModalClose = function () {
             navMenuModalScript.remove()
             navMenuModal.remove()
             console.log(navMenuModal.id)
-        }, `${navModalTimer}`)
+        }, `${navModalFadeOutTimer}`)
     }
 }
 

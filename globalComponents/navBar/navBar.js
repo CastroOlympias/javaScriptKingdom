@@ -2,9 +2,6 @@ const navBar = document.createElement('section');
 navBar.className = 'navBar'
 indexBodyId.append(navBar)
 
-const DOMRefreshTimer = 500
-const navModalTimer = 500
-
 const navHomeAnch = document.createElement('a')
 navBar.append(navHomeAnch)
 
@@ -14,7 +11,7 @@ navHomeBtn.textContent = 'Home';
 navHomeAnch.append(navHomeBtn)
 
 const homeButtonScript = document.createElement('script')
-homeButtonScript.setAttribute('src', './globalComponents/navBar/homeButton/homeButton.js')
+homeButtonScript.setAttribute('src', './globalComponents/navBar/homeButton/navHomeButton.js')
 indexBodyId.append(homeButtonScript)
 
 const navAppListAnch = document.createElement('a')
@@ -27,8 +24,10 @@ navAppListBtn.textContent = 'Open AppList';
 navAppListAnch.append(navAppListBtn)
 
 const appListButtonScript = document.createElement('script')
-appListButtonScript.setAttribute('src', './globalComponents/navBar/appListButton/appListButton.js')
+appListButtonScript.setAttribute('src', './globalComponents/navBar/appListButton/navAppListButton.js')
 indexBodyId.append(appListButtonScript)
+
+
 
 const navMenuAnch = document.createElement('a')
 navBar.append(navMenuAnch)
@@ -40,5 +39,5 @@ navMenuBtn.textContent = 'Open Menu';
 navMenuAnch.append(navMenuBtn)
 
 const menuButtonScript = document.createElement('script')
-menuButtonScript.setAttribute('src', './globalComponents/navBar/menuButton/menuButton.js')
+menuButtonScript.setAttribute('src', './globalComponents/navBar/menuButton/navMenuButton.js')
 indexBodyId.append(menuButtonScript)

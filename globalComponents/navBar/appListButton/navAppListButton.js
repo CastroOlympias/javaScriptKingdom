@@ -1,9 +1,9 @@
 const navAppListModalStyles = document.createElement('link')
 navAppListModalStyles.rel = 'stylesheet'
-navAppListModalStyles.href = './loadComponents/appListModal/appListModal.css'
+navAppListModalStyles.href = './loadComponents/appListModal/navAppListModal.css'
 
 const navAppListModalScript = document.createElement('script')
-navAppListModalScript.setAttribute('src', './loadComponents/appListModal/appListModal.js')
+navAppListModalScript.setAttribute('src', './loadComponents/appListModal/navAppListModal.js')
 
 const navAppListModal = document.createElement('section');
 navAppListModal.className = 'navAppListModal-opened'
@@ -29,9 +29,12 @@ const navAppListModalOpen = function () {
         navAppListBtn.textContent = 'Close AppList';
         console.log(navAppListModal.id)
         indexHeadId.append(navAppListModalStyles)
-        indexBodyId.append(navAppListModalScript)
-        indexBodyId.append(navAppListModal);
-
+        indexHeadId.append(navAppListModalScript)
+        setTimeout(() => {
+            indexBodyId.append(navAppListModal);
+        }, `${modalOpenDelayTimer}`)
+        
+        // navAppListModal.append(hello);
         navMenuModal.className = 'navMenuModal-closed'
         navMenuBtn.id = 'navMenu-closed'
         navMenuBtn.textContent = 'Open Menu'
@@ -41,7 +44,7 @@ const navAppListModalOpen = function () {
             navMenuModalScript.remove()
             navMenuModal.remove()
             console.log(navMenuModal.id)
-        }, `${navModalTimer}`)
+        }, `${navModalFadeOutTimer}`)
     }
 }
 
@@ -52,13 +55,15 @@ const navAppListModalClose = function () {
         navAppListModal.className = 'navAppListModal-closed'
         navAppListBtn.id = 'navAppList-closed'
         navAppListBtn.textContent = 'Open AppList'
+        // hello.remove()
         setTimeout(() => {
             navAppListModal.id = 'navAppListModal-closed'
+            
             navAppListModalStyles.remove()
             navAppListModalScript.remove()
             navAppListModal.remove()
             console.log(navAppListModal.id)
-        }, `${navModalTimer}`)
+        }, `${navModalFadeOutTimer}`)
     }
 }
 

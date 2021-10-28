@@ -1,6 +1,8 @@
+
+console.log('App List Modal now opened')
 const componentOneScript = document.createElement('script')
 componentOneScript.setAttribute('src', './loadComponents/testComp2/testComp2.js')
-navAppListModal.append(componentOneScript)
+indexHeadId.append(componentOneScript)
 
 const ApplicationAnchor = document.createElement('a')
 ApplicationAnchor.href = 'application.html'
