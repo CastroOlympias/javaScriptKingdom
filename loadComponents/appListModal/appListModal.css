@@ -1,4 +1,4 @@
-.navAppListModal-open {
+.navAppListModal-opened {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -18,11 +18,11 @@
     }
 }
 
-.navAppListModal-open {
-    animation: .3s ease-out 0s .5 slideInFromLeft;
+.navAppListModal-opened {
+    animation: .5s ease-out 0s .5 slideInFromLeft;
 }
 
-.navAppListModal-close {
+.navAppListModal-closed {
     padding: 10px;
     position: absolute;
     bottom: 100px;
@@ -44,7 +44,7 @@
     }
 }
 
-.navAppListModal-close, text {
+.navAppListModal-closed, text {
     animation-name: navAppListModal-fade-out;
     animation-duration: .5s;
 }

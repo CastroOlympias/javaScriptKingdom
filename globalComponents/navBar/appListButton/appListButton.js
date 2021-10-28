@@ -3,7 +3,7 @@ navBar.append(navAppListAnch)
 
 const navAppListBtn = document.createElement('button');
 navAppListBtn.className = 'navMenuButtons'
-navAppListBtn.id = 'navAppList-open'
+navAppListBtn.id = 'navAppList-closed'
 navAppListBtn.textContent = 'Open AppList';
 navAppListAnch.append(navAppListBtn)
 
@@ -15,29 +15,56 @@ const navAppListModalScript = document.createElement('script')
 navAppListModalScript.setAttribute('src', './loadComponents/appListModal/appListModal.js')
 
 const navAppListModal = document.createElement('section');
-navAppListModal.className = 'navAppListModal-open'
+navAppListModal.className = 'navAppListModal-opened'
+navAppListModal.id = 'navAppListModal-closed'
 
-const appListModalOpenCLose = function () {
-    if (navAppListBtn.id == 'navAppList-open') {
-        navAppListBtn.id = 'navAppList-close'
+console.log(navAppListModal.id)
+
+const checkDOMForComponent = function () {
+    if (navAppListModal.id == 'navAppListModal-closed') {
+        appListModalOpen()
+    } else {
+        appListModalClose()
+    }
+}
+
+const appListModalOpen = function () {
+    if (navAppListModal.id == 'navAppListModal-opened') {
+        return
+    } else {
+        navAppListModal.className = 'navAppListModal-opened'
+        navAppListModal.id = 'navAppListModal-opened'
+        navAppListBtn.id = 'navAppList-opened'
+        navAppListBtn.textContent = 'Close AppList';
+        console.log(navAppListModal.id)
         indexHeadId.append(navAppListModalStyles)
         indexBodyId.append(navAppListModalScript)
         indexBodyId.append(navAppListModal);
-        navAppListModal.className = 'navAppListModal-open'
-        navAppListBtn.textContent = 'Close AppList';
         closeNavMenu()
+    }
+}
+
+const appListModalClose = function () {
+    if (navAppListModal.id == 'navAppListModal-closed') {
+        return
     } else {
+        navAppListModal.className = 'navAppListModal-closed'
+        navAppListBtn.id = 'navAppList-closed'
+        navAppListBtn.textContent = 'Open AppList';
         setTimeout(() => {
+            navAppListModal.id = 'navAppListModal-closed'
+            componentOneScript.remove()
+            hello.remove()
             navAppListModalStyles.remove()
             navAppListModalScript.remove()
             navAppListModal.remove()
+            console.log(navAppListModal.id)
         }, `${navModalTimer}`)
-        navAppListModal.className = 'navAppListModal-close'
-        navAppListBtn.id = 'navAppList-open'
-        navAppListBtn.textContent = 'Open AppList';
     }
 }
-navAppListBtn.onclick = appListModalOpenCLose;
+
+
+navAppListBtn.onclick = checkDOMForComponent;
 
 closeNavMenu = function () {
     navMenuBtn.id = 'navMenu-open'
