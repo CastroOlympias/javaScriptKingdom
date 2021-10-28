@@ -1,7 +1,7 @@
 .navMenuModal-opened {
     padding: 10px;
     position: absolute;
-    bottom: 100px;
+    bottom: 15%;
     height: 75%;
     width: 90%;
     box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
@@ -22,13 +22,13 @@
 }
 .navMenuModal-opened {
     animation-name: navMenuModal-fade-in;
-    animation-duration: .5s;
+    animation-duration: .7s;
 }
 
 .navMenuModal-closed {
     padding: 10px;
     position: absolute;
-    bottom: 100px;
+    bottom: 15%;
     height: 75%;
     width: 90%;
     box-shadow: transparent;
