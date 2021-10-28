@@ -1,11 +1,3 @@
-const navHomeAnch = document.createElement('a')
-navBar.append(navHomeAnch)
-
-const navHomeBtn = document.createElement('button');
-navHomeBtn.className = 'navMenuButtons'
-navHomeBtn.textContent = 'Home';
-navHomeAnch.append(navHomeBtn)
-
 const domRefresh = function () {
     navMenuModal.id = 'navMenuModal-open'
     navAppListModal.id = 'navAppListModal-open'

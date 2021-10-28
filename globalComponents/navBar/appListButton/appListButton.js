@@ -1,12 +1,3 @@
-const navAppListAnch = document.createElement('a')
-navBar.append(navAppListAnch)
-
-const navAppListBtn = document.createElement('button');
-navAppListBtn.className = 'navMenuButtons'
-navAppListBtn.id = 'navAppList-closed'
-navAppListBtn.textContent = 'Open AppList';
-navAppListAnch.append(navAppListBtn)
-
 const navAppListModalStyles = document.createElement('link')
 navAppListModalStyles.rel = 'stylesheet'
 navAppListModalStyles.href = './loadComponents/appListModal/appListModal.css'

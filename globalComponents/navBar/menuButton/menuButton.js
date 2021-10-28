@@ -1,12 +1,3 @@
-const navMenuAnch = document.createElement('a')
-navBar.append(navMenuAnch)
-
-const navMenuBtn = document.createElement('button');
-navMenuBtn.className = 'navMenuButtons'
-navMenuBtn.id = 'navMenu-open'
-navMenuBtn.textContent = 'Open Menu';
-navMenuAnch.append(navMenuBtn)
-
 const navMenuModalStyles = document.createElement('link')
 navMenuModalStyles.rel = 'stylesheet'
 navMenuModalStyles.href = './loadComponents/menuModal/menuModal.css'
