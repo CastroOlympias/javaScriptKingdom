@@ -4,7 +4,7 @@
     bottom: 100px;
     height: 80%;
     width: 95%;
-    box-shadow: 10px 10px 10px rgb(37, 3, 3);
+    box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     border-radius: 17px;
     background-color: greenyellow;
     
@@ -17,10 +17,10 @@
     }
     to {
         background-color: greenyellow;
-        box-shadow: 10px 10px 10px rgb(37, 3, 3);
+        box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     }
 }
-.navMenuModal-opened, text {
+.navMenuModal-opened {
     animation-name: navMenuModal-fade-in;
     animation-duration: .5s;
 }
@@ -39,7 +39,7 @@
 @keyframes navMenuModal-fade-out {
     from {
         background-color: greenyellow;
-        box-shadow: 10px 10px 10px rgb(37, 3, 3);
+        box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     }
     to {
         background-color: transparent;
@@ -47,7 +47,7 @@
     }
 }
 
-.navMenuModal-closed, text {
+.navMenuModal-closed {
     animation-name: navMenuModal-fade-out;
     animation-duration: .5s;
 }
