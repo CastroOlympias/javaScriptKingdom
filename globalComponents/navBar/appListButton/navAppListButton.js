@@ -6,7 +6,7 @@ const navAppListModalScript = document.createElement('script')
 navAppListModalScript.setAttribute('src', './loadComponents/appListModal/navAppListModal.js')
 
 const navAppListModalOffClickClose = document.createElement('section')
-navAppListModalOffClickClose.className = 'navAppListModalOffClickClose'
+navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-opened'
 navAppListModalOffClickClose.setAttribute('onclick', 'DOMRefresh()')
 
 
@@ -32,6 +32,7 @@ const navAppListModalOpen = function () {
         navAppListModal.id = 'navAppListModal-opened'
         navAppListBtn.id = 'navAppList-opened'
         navAppListBtn.textContent = 'Close AppList';
+        navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-opened'
         console.log(navAppListModal.id)
         indexHeadId.append(navAppListModalStyles)
         indexHeadId.append(navAppListModalScript)
@@ -62,6 +63,7 @@ const navAppListModalClose = function () {
         navAppListModal.className = 'navAppListModal-closed'
         navAppListBtn.id = 'navAppList-closed'
         navAppListBtn.textContent = 'Open AppList'
+        navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-closed'
         setTimeout(() => {
             navAppListModal.id = 'navAppListModal-closed'
             navAppListModalStyles.remove()

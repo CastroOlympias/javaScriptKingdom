@@ -1,6 +1,6 @@
 .navAppListModal-opened {
     position: fixed;
-    padding: 10px;
+    padding: 12px;
     bottom: 20%;
     height: 70%;
     width: 80%;
@@ -24,7 +24,7 @@
 
 .navAppListModal-closed {
     position: fixed;
-    padding: 10px;
+    padding: 12px;
     bottom: 20%;
     height: 70%;
     width: 80%;
@@ -49,9 +49,46 @@
     animation-duration: .5s;
 }
 
-.navAppListModalOffClickClose {
-    background-color: transparent;
+
+
+/* Styles for the DOMRefresh section element */
+.navAppListModalOffClickClose-opened {
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     height: 100%;
     width: 100%;
+}
+
+@keyframes navAppListModalOffClickClose-fade-in {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+.navAppListModalOffClickClose-opened {
+    animation-name: navAppListModalOffClickClose-fade-in;
+    animation-duration: .7s;
+}
+
+.navAppListModalOffClickClose-closed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+@keyframes navAppListModalOffClickClose-fade-out {
+    from {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+.navAppListModalOffClickClose-closed {
+    animation-name: navAppListModalOffClickClose-fade-out;
+    animation-duration: .5s;
 }
