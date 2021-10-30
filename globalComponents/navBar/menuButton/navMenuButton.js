@@ -27,6 +27,7 @@ const navMenuModalOpen = function () {
     if (navMenuModal.id == 'navMenuModal-opened') {
         return
     } else {
+        navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-closed'
         navMenuModal.className = 'navMenuModal-opened'
         navMenuModal.id = 'navMenuModal-opened'
         navMenuBtn.id = 'navMenuModal-opened'
@@ -38,8 +39,6 @@ const navMenuModalOpen = function () {
             indexBodyId.append(navMenuModalOffClickClose)
             indexBodyId.append(navMenuModal);
         }, `${modalOpenDelayTimer}`)
-
-
         navAppListModal.className = 'navAppListModal-closed'
         navAppListBtn.id = 'navAppList-closed'
         navAppListBtn.textContent = 'Open AppList'
