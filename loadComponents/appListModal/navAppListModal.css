@@ -1,9 +1,9 @@
 .navAppListModal-opened {
     position: fixed;
     padding: 10px;
-    bottom: 15%;
-    height: 80%;
-    width: 90%;
+    bottom: 20%;
+    height: 70%;
+    width: 80%;
     box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     border-radius: 25px;
     background-color: rgb(47, 255, 238);
@@ -25,9 +25,9 @@
 .navAppListModal-closed {
     position: fixed;
     padding: 10px;
-    bottom: 15%;
-    height: 80%;
-    width: 90%;
+    bottom: 20%;
+    height: 70%;
+    width: 80%;
     box-shadow: transparent;
     border-radius: 25px;
     background-color: transparent;

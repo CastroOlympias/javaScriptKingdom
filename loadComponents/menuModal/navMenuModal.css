@@ -1,13 +1,12 @@
 .navMenuModal-opened {
     position: fixed;
     padding: 10px;
-    bottom: 15%;
-    height: 80%;
-    width: 90%;
+    bottom: 20%;
+    height: 70%;
+    width: 80%;
     box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     border-radius: 25px;
-    background-color: greenyellow;
-    
+    background-color: rgba(172, 255, 47, 0.644);
 }
 
 @keyframes navMenuModal-fade-in {
@@ -16,7 +15,7 @@
         box-shadow: transparent;
     }
     to {
-        background-color: greenyellow;
+        background-color: rgba(172, 255, 47, 0.644);
         box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     }
 }
@@ -28,9 +27,9 @@
 .navMenuModal-closed {
     position: fixed;
     padding: 10px;
-    bottom: 15%;
-    height: 80%;
-    width: 90%;
+    bottom: 20%;
+    height: 70%;
+    width: 80%;
     box-shadow: transparent;
     border-radius: 25px;
     background-color: transparent;
@@ -38,7 +37,7 @@
 
 @keyframes navMenuModal-fade-out {
     from {
-        background-color: greenyellow;
+        background-color: rgba(172, 255, 47, 0.644);
         box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     }
     to {
