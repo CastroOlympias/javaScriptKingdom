@@ -1,8 +1,8 @@
 .navMenuModal-opened {
+    position: fixed;
     padding: 10px;
-    position: absolute;
     bottom: 15%;
-    height: 75%;
+    height: 80%;
     width: 90%;
     box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     border-radius: 25px;
@@ -26,10 +26,10 @@
 }
 
 .navMenuModal-closed {
+    position: fixed;
     padding: 10px;
-    position: absolute;
     bottom: 15%;
-    height: 75%;
+    height: 80%;
     width: 90%;
     box-shadow: transparent;
     border-radius: 25px;

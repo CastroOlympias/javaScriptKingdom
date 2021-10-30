@@ -12,7 +12,7 @@
 
 const DOMRefreshTimer = 500
 const navModalFadeOutTimer = 500
-const modalOpenDelayTimer = 5
+const modalOpenDelayTimer = 30
 
 const indexHtmlId = document.getElementById('indexHtmlId')
 const indexHeadId = document.getElementById('indexHeadId');
