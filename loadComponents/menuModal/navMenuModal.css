@@ -50,3 +50,10 @@
     animation-name: navMenuModal-fade-out;
     animation-duration: .5s;
 }
+
+.navMenuModalOffClickClose {
+    background-color: transparent;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}

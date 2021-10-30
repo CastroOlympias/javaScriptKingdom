@@ -5,6 +5,10 @@ navMenuModalStyles.href = './loadComponents/menuModal/navMenuModal.css'
 const navMenuModalScript = document.createElement('script')
 navMenuModalScript.setAttribute('src', './loadComponents/menuModal/navMenuModal.js')
 
+const navMenuModalOffClickClose = document.createElement('section')
+navMenuModalOffClickClose.className = 'navMenuModalOffClickClose'
+navMenuModalOffClickClose.setAttribute('onclick', 'DOMRefresh()')
+
 const navMenuModal = document.createElement('section');
 navMenuModal.className = 'navMenuModal-opened'
 navMenuModal.id = 'navMenuModal-closed'
@@ -31,6 +35,7 @@ const navMenuModalOpen = function () {
         indexHeadId.append(navMenuModalStyles)
         indexBodyId.append(navMenuModalScript)
         setTimeout(() => {
+            indexBodyId.append(navMenuModalOffClickClose)
             indexBodyId.append(navMenuModal);
         }, `${modalOpenDelayTimer}`)
 
@@ -42,6 +47,7 @@ const navMenuModalOpen = function () {
             navAppListModal.id = 'navAppListModal-closed'
             navAppListModalStyles.remove()
             navAppListModalScript.remove()
+            navAppListModalOffClickClose.remove()
             navAppListModal.remove()
             console.log(navAppListModal.id)
         }, `${navModalFadeOutTimer}`)
@@ -59,6 +65,7 @@ const navMenuModalClose = function () {
             navMenuModal.id = 'navMenuModal-closed'
             navMenuModalStyles.remove()
             navMenuModalScript.remove()
+            navMenuModalOffClickClose.remove()
             navMenuModal.remove()
             console.log(navMenuModal.id)
         }, `${navModalFadeOutTimer}`)

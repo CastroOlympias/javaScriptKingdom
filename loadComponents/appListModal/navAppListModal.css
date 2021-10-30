@@ -48,3 +48,10 @@
     animation-name: navAppListModal-fade-out;
     animation-duration: .5s;
 }
+
+.navAppListModalOffClickClose {
+    background-color: transparent;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
