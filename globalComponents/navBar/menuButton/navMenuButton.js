@@ -13,8 +13,6 @@ const navMenuModal = document.createElement('section');
 navMenuModal.className = 'navMenuModal-opened'
 navMenuModal.id = 'navMenuModal-closed'
 
-console.log(`initial state ${navMenuModal.id}`)
-
 const checkDOMForMenuModalComponent = function () {
     if (navMenuModal.id == 'navMenuModal-closed') {
         navMenuModalOpen()
@@ -27,29 +25,17 @@ const navMenuModalOpen = function () {
     if (navMenuModal.id == 'navMenuModal-opened') {
         return
     } else {
-        navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-closed'
         navMenuModal.className = 'navMenuModal-opened'
         navMenuModal.id = 'navMenuModal-opened'
         navMenuBtn.id = 'navMenuModal-opened'
         navMenuBtn.textContent = 'Close Menu'
-        console.log(navMenuModal.id)
         indexHeadId.append(navMenuModalStyles)
         indexBodyId.append(navMenuModalScript)
         setTimeout(() => {
             indexBodyId.append(navMenuModalOffClickClose)
             indexBodyId.append(navMenuModal);
         }, `${modalOpenDelayTimer}`)
-        navAppListModal.className = 'navAppListModal-closed'
-        navAppListBtn.id = 'navAppList-closed'
-        navAppListBtn.textContent = 'Open AppList'
-        setTimeout(() => {
-            navAppListModal.id = 'navAppListModal-closed'
-            navAppListModalStyles.remove()
-            navAppListModalScript.remove()
-            navAppListModalOffClickClose.remove()
-            navAppListModal.remove()
-            console.log(navAppListModal.id)
-        }, `${navModalFadeOutTimer}`)
+        navAppListModalClose()
     }
 }
 
@@ -66,7 +52,6 @@ const navMenuModalClose = function () {
             navMenuModalScript.remove()
             navMenuModalOffClickClose.remove()
             navMenuModal.remove()
-            console.log(navMenuModal.id)
         }, `${navModalFadeOutTimer}`)
     }
 }

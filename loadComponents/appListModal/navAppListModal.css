@@ -1,9 +1,9 @@
 .navAppListModal-opened {
     position: fixed;
     padding: 12px;
-    bottom: 20%;
-    height: 70%;
-    width: 80%;
+    bottom: 100px;
+    height: 75%;
+    width: 90%;
     box-shadow: 2px 2px 10px 2px rgb(0, 0, 0);
     border-radius: 25px;
     background-color: rgb(47, 255, 238);
@@ -25,9 +25,9 @@
 .navAppListModal-closed {
     position: fixed;
     padding: 12px;
-    bottom: 20%;
-    height: 70%;
-    width: 80%;
+    bottom: 100px;
+    height: 75%;
+    width: 90%;
     box-shadow: transparent;
     border-radius: 25px;
     background-color: transparent;
@@ -53,7 +53,7 @@
 
 /* Styles for the DOMRefresh section element */
 .navAppListModalOffClickClose-opened {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -64,7 +64,7 @@
         background-color: transparent;
     }
     to {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
     }
 }
 .navAppListModalOffClickClose-opened {
@@ -81,7 +81,7 @@
 
 @keyframes navAppListModalOffClickClose-fade-out {
     from {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
     }
     to {
         background-color: transparent;

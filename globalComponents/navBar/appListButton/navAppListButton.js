@@ -9,12 +9,9 @@ const navAppListModalOffClickClose = document.createElement('section')
 navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-opened'
 navAppListModalOffClickClose.setAttribute('onclick', 'DOMRefresh()')
 
-
 const navAppListModal = document.createElement('section');
 navAppListModal.className = 'navAppListModal-opened'
 navAppListModal.id = 'navAppListModal-closed'
-
-console.log(`initial state ${navAppListModal.id}`)
 
 const checkDOMForAppListComponent = function () {
     if (navAppListModal.id == 'navAppListModal-closed') {
@@ -33,26 +30,13 @@ const navAppListModalOpen = function () {
         navAppListBtn.id = 'navAppList-opened'
         navAppListBtn.textContent = 'Close AppList';
         navAppListModalOffClickClose.className = 'navAppListModalOffClickClose-opened'
-        console.log(navAppListModal.id)
         indexHeadId.append(navAppListModalStyles)
         indexHeadId.append(navAppListModalScript)
         setTimeout(() => {
             indexBodyId.append(navAppListModalOffClickClose)
             indexBodyId.append(navAppListModal);
         }, `${modalOpenDelayTimer}`)
-        
-        // navAppListModal.append(hello);
-        navMenuModal.className = 'navMenuModal-closed'
-        navMenuBtn.id = 'navMenu-closed'
-        navMenuBtn.textContent = 'Open Menu'
-        setTimeout(() => {
-            navMenuModal.id = 'navMenuModal-closed'
-            navMenuModalStyles.remove()
-            navMenuModalScript.remove()
-            navMenuModalOffClickClose.remove()
-            navMenuModal.remove()
-            console.log(navMenuModal.id)
-        }, `${navModalFadeOutTimer}`)
+        navMenuModalClose()
     }
 }
 
@@ -70,7 +54,6 @@ const navAppListModalClose = function () {
             navAppListModalScript.remove()
             navAppListModalOffClickClose.remove()
             navAppListModal.remove()
-            console.log(navAppListModal.id)
         }, `${navModalFadeOutTimer}`)
     }
 }

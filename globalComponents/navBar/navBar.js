@@ -1,6 +1,6 @@
 const navBar = document.createElement('section');
 navBar.className = 'navBar'
-indexBodyId.append(navBar)
+indexHtmlId.append(navBar)
 
 const navHomeAnch = document.createElement('a')
 navBar.append(navHomeAnch)
@@ -12,7 +12,7 @@ navHomeAnch.append(navHomeBtn)
 
 const homeButtonScript = document.createElement('script')
 homeButtonScript.setAttribute('src', './globalComponents/navBar/homeButton/navHomeButton.js')
-indexBodyId.append(homeButtonScript)
+indexHeadId.append(homeButtonScript)
 
 const navAppListAnch = document.createElement('a')
 navBar.append(navAppListAnch)
@@ -25,9 +25,7 @@ navAppListAnch.append(navAppListBtn)
 
 const appListButtonScript = document.createElement('script')
 appListButtonScript.setAttribute('src', './globalComponents/navBar/appListButton/navAppListButton.js')
-indexBodyId.append(appListButtonScript)
-
-
+indexHeadId.append(appListButtonScript)
 
 const navMenuAnch = document.createElement('a')
 navBar.append(navMenuAnch)
@@ -40,4 +38,4 @@ navMenuAnch.append(navMenuBtn)
 
 const menuButtonScript = document.createElement('script')
 menuButtonScript.setAttribute('src', './globalComponents/navBar/menuButton/navMenuButton.js')
-indexBodyId.append(menuButtonScript)
+indexHeadId.append(menuButtonScript)
