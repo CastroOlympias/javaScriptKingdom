@@ -3,6 +3,10 @@
 ## Description
 This is essentially, going to be a javaScript tool box where I am sharping my understand of using a dynamic DOM to load in other modules and to remove them, while also working on UI concepts for animating element componenets on load and unload via switching of classes.
 
+Checkout out the dev tools to observe the DOM, dynamically loading and unloading, whilst also retaining some DOM elements, (wall of text) for persisting DOM elements. You can observe class name changes on the button elements and modals, which trigger style animations and functions.
+
+<a href="https://castroolympias.github.io/javaScriptKingdom/">Link to app</a>
+
 <img src="media/Root Application.gif"/>
 
 ## Table of Contents
